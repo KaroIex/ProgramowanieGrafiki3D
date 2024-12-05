@@ -1,0 +1,1535 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: Graphics3DCode
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/kprzystalski/UJ/3d/cmake-build-debug/
+# =============================================================================
+# Object build statements for OBJECT_LIBRARY target glad
+
+
+#############################################
+# Order-only phony target for glad
+
+build cmake_object_order_depends_target_glad: phony || CMakeFiles/glad.dir
+
+build CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src/gl.c.o: C_COMPILER__glad_Debug /Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/src/gl.c || cmake_object_order_depends_target_glad
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG
+  DEP_FILE = CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src/gl.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu11
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include
+  OBJECT_DIR = CMakeFiles/glad.dir
+  OBJECT_FILE_DIR = CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src
+
+
+
+#############################################
+# Object library glad
+
+build glad: phony CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src/gl.c.o
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for uninstall
+
+build _deps/glfw-build/uninstall: phony _deps/glfw-build/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glfw-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/glfw-build/edit_cache: phony _deps/glfw-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glfw-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/rebuild_cache: phony _deps/glfw-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/glfw-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/glfw-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/glfw-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/install: phony _deps/glfw-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/glfw-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/glfw-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/install/local: phony _deps/glfw-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/glfw-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/glfw-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/install/strip: phony _deps/glfw-build/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for _deps/glfw-build/CMakeFiles/uninstall
+
+build _deps/glfw-build/CMakeFiles/uninstall | ${cmake_ninja_workdir}_deps/glfw-build/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/cmake_uninstall.cmake
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/platform.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/null_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/null_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/null_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/null_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/cocoa_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_time.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/posix_module.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/posix_module.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/posix_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/cocoa_init.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/cocoa_window.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+build _deps/glfw-build/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src/nsgl_context.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG -D_GLFW_COCOA
+  DEP_FILE = _deps/glfw-build/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics -Wall -std=c99
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library _deps/glfw-build/src/libglfw3.a
+
+build _deps/glfw-build/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug _deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_time.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/posix_module.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/posix_thread.c.o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_init.m.o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o _deps/glfw-build/src/CMakeFiles/glfw.dir/cocoa_window.m.o _deps/glfw-build/src/CMakeFiles/glfw.dir/nsgl_context.m.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/glfw-build/src/CMakeFiles/glfw.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = _deps/glfw-build/src/libglfw3.a
+  TARGET_PDB = glfw3.a.dbg
+
+
+#############################################
+# Utility command for update_mappings
+
+build _deps/glfw-build/src/update_mappings: phony _deps/glfw-build/src/CMakeFiles/update_mappings
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glfw-build/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/glfw-build/src/edit_cache: phony _deps/glfw-build/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glfw-build/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/src/rebuild_cache: phony _deps/glfw-build/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/glfw-build/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/glfw-build/src/CMakeFiles/install.util: CUSTOM_COMMAND _deps/glfw-build/src/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/src/install: phony _deps/glfw-build/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/glfw-build/src/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/glfw-build/src/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/src/install/local: phony _deps/glfw-build/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/glfw-build/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/glfw-build/src/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/glfw-build/src/install/strip: phony _deps/glfw-build/src/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for _deps/glfw-build/src/CMakeFiles/update_mappings
+
+build _deps/glfw-build/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}_deps/glfw-build/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+  DESC = Updating gamepad mappings from upstream repository
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glm-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/glm-build/edit_cache: phony _deps/glm-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glm-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glm-build/rebuild_cache: phony _deps/glm-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/glm-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/glm-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/glm-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/glm-build/install: phony _deps/glm-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/glm-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/glm-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/glm-build/install/local: phony _deps/glm-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/glm-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/glm-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/glm-build/install/strip: phony _deps/glm-build/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/glm-build/glm/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build/glm && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/glm-build/glm/edit_cache: phony _deps/glm-build/glm/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/glm-build/glm/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build/glm && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/glm-build/glm/rebuild_cache: phony _deps/glm-build/glm/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/glm-build/glm/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/glm-build/glm/CMakeFiles/install.util: CUSTOM_COMMAND _deps/glm-build/glm/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build/glm && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/glm-build/glm/install: phony _deps/glm-build/glm/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/glm-build/glm/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/glm-build/glm/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build/glm && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/glm-build/glm/install/local: phony _deps/glm-build/glm/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/glm-build/glm/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/glm-build/glm/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build/glm && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/glm-build/glm/install/strip: phony _deps/glm-build/glm/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target spdlog
+
+
+#############################################
+# Order-only phony target for spdlog
+
+build cmake_object_order_depends_target_spdlog: phony || _deps/spdlog-build/CMakeFiles/spdlog.dir
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o: CXX_COMPILER__spdlog_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/src/spdlog.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=c++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o: CXX_COMPILER__spdlog_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/src/stdout_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=c++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o: CXX_COMPILER__spdlog_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/src/color_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=c++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o: CXX_COMPILER__spdlog_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/src/file_sinks.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=c++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o: CXX_COMPILER__spdlog_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/src/async.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=c++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o: CXX_COMPILER__spdlog_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/src/cfg.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=c++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+build _deps/spdlog-build/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o: CXX_COMPILER__spdlog_Debug /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/src/bundled_fmtlib_format.cpp || cmake_object_order_depends_target_spdlog
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = _deps/spdlog-build/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=c++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  OBJECT_FILE_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target spdlog
+
+
+#############################################
+# Link the static library _deps/spdlog-build/libspdlogd.a
+
+build _deps/spdlog-build/libspdlogd.a: CXX_STATIC_LIBRARY_LINKER__spdlog_Debug _deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o _deps/spdlog-build/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = _deps/spdlog-build/CMakeFiles/spdlog.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = _deps/spdlog-build/libspdlogd.a
+  TARGET_PDB = spdlogd.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build _deps/spdlog-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build _deps/spdlog-build/edit_cache: phony _deps/spdlog-build/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build _deps/spdlog-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/rebuild_cache: phony _deps/spdlog-build/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build _deps/spdlog-build/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build _deps/spdlog-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/spdlog-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/install: phony _deps/spdlog-build/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build _deps/spdlog-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/spdlog-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/install/local: phony _deps/spdlog-build/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build _deps/spdlog-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/spdlog-build/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build _deps/spdlog-build/install/strip: phony _deps/spdlog-build/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target application
+
+
+#############################################
+# Order-only phony target for application
+
+build cmake_object_order_depends_target_application: phony || cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw
+
+build src/Application/CMakeFiles/application.dir/application.cpp.o: CXX_COMPILER__application_Debug /Users/kprzystalski/UJ/3d/src/Application/application.cpp || cmake_object_order_depends_target_application
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG
+  DEP_FILE = src/Application/CMakeFiles/application.dir/application.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/Application/CMakeFiles/application.dir
+  OBJECT_FILE_DIR = src/Application/CMakeFiles/application.dir
+
+build src/Application/CMakeFiles/application.dir/utils.cpp.o: CXX_COMPILER__application_Debug /Users/kprzystalski/UJ/3d/src/Application/utils.cpp || cmake_object_order_depends_target_application
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG
+  DEP_FILE = src/Application/CMakeFiles/application.dir/utils.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/Application/CMakeFiles/application.dir
+  OBJECT_FILE_DIR = src/Application/CMakeFiles/application.dir
+
+build src/Application/CMakeFiles/application.dir/shader_source.cpp.o: CXX_COMPILER__application_Debug /Users/kprzystalski/UJ/3d/src/Application/shader_source.cpp || cmake_object_order_depends_target_application
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG
+  DEP_FILE = src/Application/CMakeFiles/application.dir/shader_source.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/Application/CMakeFiles/application.dir
+  OBJECT_FILE_DIR = src/Application/CMakeFiles/application.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target application
+
+
+#############################################
+# Link the static library src/Application/libapplication.a
+
+build src/Application/libapplication.a: CXX_STATIC_LIBRARY_LINKER__application_Debug CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src/gl.c.o src/Application/CMakeFiles/application.dir/application.cpp.o src/Application/CMakeFiles/application.dir/utils.cpp.o src/Application/CMakeFiles/application.dir/shader_source.cpp.o || _deps/glfw-build/src/libglfw3.a glad
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/Application/CMakeFiles/application.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/Application/libapplication.a
+  TARGET_PDB = application.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/Application/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Application && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/Application/edit_cache: phony src/Application/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/Application/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Application && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/Application/rebuild_cache: phony src/Application/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/Application/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/Application/CMakeFiles/install.util: CUSTOM_COMMAND src/Application/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Application && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/Application/install: phony src/Application/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/Application/CMakeFiles/install/local.util: CUSTOM_COMMAND src/Application/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Application && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/Application/install/local: phony src/Application/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/Application/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/Application/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Application && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/Application/install/strip: phony src/Application/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target objreader
+
+
+#############################################
+# Order-only phony target for objreader
+
+build cmake_object_order_depends_target_objreader: phony || cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw cmake_object_order_depends_target_spdlog
+
+build src/ObjectReader/CMakeFiles/objreader.dir/obj_reader.cpp.o: CXX_COMPILER__objreader_Debug /Users/kprzystalski/UJ/3d/src/ObjectReader/obj_reader.cpp || cmake_object_order_depends_target_objreader
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/ObjectReader/CMakeFiles/objreader.dir/obj_reader.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/ObjectReader/CMakeFiles/objreader.dir
+  OBJECT_FILE_DIR = src/ObjectReader/CMakeFiles/objreader.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target objreader
+
+
+#############################################
+# Link the static library src/ObjectReader/libobjreader.a
+
+build src/ObjectReader/libobjreader.a: CXX_STATIC_LIBRARY_LINKER__objreader_Debug CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src/gl.c.o src/ObjectReader/CMakeFiles/objreader.dir/obj_reader.cpp.o || _deps/glfw-build/src/libglfw3.a _deps/spdlog-build/libspdlogd.a glad
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/ObjectReader/CMakeFiles/objreader.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/ObjectReader/libobjreader.a
+  TARGET_PDB = objreader.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/ObjectReader/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/ObjectReader && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/ObjectReader/edit_cache: phony src/ObjectReader/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/ObjectReader/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/ObjectReader && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/ObjectReader/rebuild_cache: phony src/ObjectReader/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/ObjectReader/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/ObjectReader/CMakeFiles/install.util: CUSTOM_COMMAND src/ObjectReader/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/ObjectReader && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/ObjectReader/install: phony src/ObjectReader/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/ObjectReader/CMakeFiles/install/local.util: CUSTOM_COMMAND src/ObjectReader/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/ObjectReader && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/ObjectReader/install/local: phony src/ObjectReader/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/ObjectReader/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/ObjectReader/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/ObjectReader && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/ObjectReader/install/strip: phony src/ObjectReader/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target xe-engine
+
+
+#############################################
+# Order-only phony target for xe-engine
+
+build cmake_object_order_depends_target_xe-engine: phony || cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw cmake_object_order_depends_target_objreader cmake_object_order_depends_target_spdlog
+
+build src/XeEngine/CMakeFiles/xe-engine.dir/ColorMaterial.cpp.o: CXX_COMPILER__xe-engine_Debug /Users/kprzystalski/UJ/3d/src/XeEngine/ColorMaterial.cpp || cmake_object_order_depends_target_xe-engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/XeEngine\" -DPROJECT_NAME=\"XeEngine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/XeEngine/CMakeFiles/xe-engine.dir/ColorMaterial.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  OBJECT_FILE_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+
+build src/XeEngine/CMakeFiles/xe-engine.dir/Scene.cpp.o: CXX_COMPILER__xe-engine_Debug /Users/kprzystalski/UJ/3d/src/XeEngine/Scene.cpp || cmake_object_order_depends_target_xe-engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/XeEngine\" -DPROJECT_NAME=\"XeEngine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/XeEngine/CMakeFiles/xe-engine.dir/Scene.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  OBJECT_FILE_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+
+build src/XeEngine/CMakeFiles/xe-engine.dir/Mesh.cpp.o: CXX_COMPILER__xe-engine_Debug /Users/kprzystalski/UJ/3d/src/XeEngine/Mesh.cpp || cmake_object_order_depends_target_xe-engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/XeEngine\" -DPROJECT_NAME=\"XeEngine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/XeEngine/CMakeFiles/xe-engine.dir/Mesh.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  OBJECT_FILE_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+
+build src/XeEngine/CMakeFiles/xe-engine.dir/mesh_loader.cpp.o: CXX_COMPILER__xe-engine_Debug /Users/kprzystalski/UJ/3d/src/XeEngine/mesh_loader.cpp || cmake_object_order_depends_target_xe-engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/XeEngine\" -DPROJECT_NAME=\"XeEngine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/XeEngine/CMakeFiles/xe-engine.dir/mesh_loader.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  OBJECT_FILE_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+
+build src/XeEngine/CMakeFiles/xe-engine.dir/Node.cpp.o: CXX_COMPILER__xe-engine_Debug /Users/kprzystalski/UJ/3d/src/XeEngine/Node.cpp || cmake_object_order_depends_target_xe-engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/XeEngine\" -DPROJECT_NAME=\"XeEngine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/XeEngine/CMakeFiles/xe-engine.dir/Node.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  OBJECT_FILE_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+
+build src/XeEngine/CMakeFiles/xe-engine.dir/PhongMaterial.cpp.o: CXX_COMPILER__xe-engine_Debug /Users/kprzystalski/UJ/3d/src/XeEngine/PhongMaterial.cpp || cmake_object_order_depends_target_xe-engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/XeEngine\" -DPROJECT_NAME=\"XeEngine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/XeEngine/CMakeFiles/xe-engine.dir/PhongMaterial.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  OBJECT_FILE_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+
+build src/XeEngine/CMakeFiles/xe-engine.dir/stb_image.cpp.o: CXX_COMPILER__xe-engine_Debug /Users/kprzystalski/UJ/3d/src/XeEngine/stb_image.cpp || cmake_object_order_depends_target_xe-engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/XeEngine\" -DPROJECT_NAME=\"XeEngine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/XeEngine/CMakeFiles/xe-engine.dir/stb_image.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  OBJECT_FILE_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+
+build src/XeEngine/CMakeFiles/xe-engine.dir/utils.cpp.o: CXX_COMPILER__xe-engine_Debug /Users/kprzystalski/UJ/3d/src/XeEngine/utils.cpp || cmake_object_order_depends_target_xe-engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/XeEngine\" -DPROJECT_NAME=\"XeEngine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DSPDLOG_COMPILED_LIB -DXE_DEBUG
+  DEP_FILE = src/XeEngine/CMakeFiles/xe-engine.dir/utils.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-src/include -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  OBJECT_FILE_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target xe-engine
+
+
+#############################################
+# Link the static library src/XeEngine/libxe-engine.a
+
+build src/XeEngine/libxe-engine.a: CXX_STATIC_LIBRARY_LINKER__xe-engine_Debug CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src/gl.c.o src/XeEngine/CMakeFiles/xe-engine.dir/ColorMaterial.cpp.o src/XeEngine/CMakeFiles/xe-engine.dir/Scene.cpp.o src/XeEngine/CMakeFiles/xe-engine.dir/Mesh.cpp.o src/XeEngine/CMakeFiles/xe-engine.dir/mesh_loader.cpp.o src/XeEngine/CMakeFiles/xe-engine.dir/Node.cpp.o src/XeEngine/CMakeFiles/xe-engine.dir/PhongMaterial.cpp.o src/XeEngine/CMakeFiles/xe-engine.dir/stb_image.cpp.o src/XeEngine/CMakeFiles/xe-engine.dir/utils.cpp.o || _deps/glfw-build/src/libglfw3.a _deps/spdlog-build/libspdlogd.a glad src/ObjectReader/libobjreader.a
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/XeEngine/CMakeFiles/xe-engine.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/XeEngine/libxe-engine.a
+  TARGET_PDB = xe-engine.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/XeEngine/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/XeEngine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/XeEngine/edit_cache: phony src/XeEngine/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/XeEngine/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/XeEngine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/XeEngine/rebuild_cache: phony src/XeEngine/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/XeEngine/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/XeEngine/CMakeFiles/install.util: CUSTOM_COMMAND src/XeEngine/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/XeEngine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/XeEngine/install: phony src/XeEngine/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/XeEngine/CMakeFiles/install/local.util: CUSTOM_COMMAND src/XeEngine/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/XeEngine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/XeEngine/install/local: phony src/XeEngine/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/XeEngine/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/XeEngine/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/XeEngine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/XeEngine/install/strip: phony src/XeEngine/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target engine
+
+
+#############################################
+# Order-only phony target for engine
+
+build cmake_object_order_depends_target_engine: phony || cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw
+
+build src/Engine/CMakeFiles/engine.dir/Mesh.cpp.o: CXX_COMPILER__engine_Debug /Users/kprzystalski/UJ/3d/src/Engine/Mesh.cpp || cmake_object_order_depends_target_engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/Engine\" -DPROJECT_NAME=\"Engine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG
+  DEP_FILE = src/Engine/CMakeFiles/engine.dir/Mesh.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/Engine/CMakeFiles/engine.dir
+  OBJECT_FILE_DIR = src/Engine/CMakeFiles/engine.dir
+
+build src/Engine/CMakeFiles/engine.dir/Material.cpp.o: CXX_COMPILER__engine_Debug /Users/kprzystalski/UJ/3d/src/Engine/Material.cpp || cmake_object_order_depends_target_engine
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/Engine\" -DPROJECT_NAME=\"Engine\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG
+  DEP_FILE = src/Engine/CMakeFiles/engine.dir/Material.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/Engine/CMakeFiles/engine.dir
+  OBJECT_FILE_DIR = src/Engine/CMakeFiles/engine.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target engine
+
+
+#############################################
+# Link the static library src/Engine/libengine.a
+
+build src/Engine/libengine.a: CXX_STATIC_LIBRARY_LINKER__engine_Debug CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src/gl.c.o src/Engine/CMakeFiles/engine.dir/Mesh.cpp.o src/Engine/CMakeFiles/engine.dir/Material.cpp.o || _deps/glfw-build/src/libglfw3.a glad
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/Engine/CMakeFiles/engine.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/Engine/libengine.a
+  TARGET_PDB = engine.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/Engine/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Engine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/Engine/edit_cache: phony src/Engine/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/Engine/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Engine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/Engine/rebuild_cache: phony src/Engine/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/Engine/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/Engine/CMakeFiles/install.util: CUSTOM_COMMAND src/Engine/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Engine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/Engine/install: phony src/Engine/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/Engine/CMakeFiles/install/local.util: CUSTOM_COMMAND src/Engine/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Engine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/Engine/install/local: phony src/Engine/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/Engine/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/Engine/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Engine && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/Engine/install/strip: phony src/Engine/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/kprzystalski/UJ/3d/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Uniforms
+
+
+#############################################
+# Order-only phony target for Uniforms
+
+build cmake_object_order_depends_target_Uniforms: phony || cmake_object_order_depends_target_application cmake_object_order_depends_target_glad cmake_object_order_depends_target_glfw
+
+build src/Assignments/Triangle/CMakeFiles/Uniforms.dir/main.cpp.o: CXX_COMPILER__Uniforms_Debug /Users/kprzystalski/UJ/3d/src/Assignments/Triangle/main.cpp || cmake_object_order_depends_target_Uniforms
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/Assignments/Triangle\" -DPROJECT_NAME=\"Uniforms\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG
+  DEP_FILE = src/Assignments/Triangle/CMakeFiles/Uniforms.dir/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/Assignments/Triangle/CMakeFiles/Uniforms.dir
+  OBJECT_FILE_DIR = src/Assignments/Triangle/CMakeFiles/Uniforms.dir
+
+build src/Assignments/Triangle/CMakeFiles/Uniforms.dir/app.cpp.o: CXX_COMPILER__Uniforms_Debug /Users/kprzystalski/UJ/3d/src/Assignments/Triangle/app.cpp || cmake_object_order_depends_target_Uniforms
+  DEFINES = -DMAJOR=4 -DMINOR=1 -DPROJECT_DIR=\"/Users/kprzystalski/UJ/3d/src/Assignments/Triangle\" -DPROJECT_NAME=\"Uniforms\" -DROOT_DIR=\"/Users/kprzystalski/UJ/3d\" -DXE_DEBUG
+  DEP_FILE = src/Assignments/Triangle/CMakeFiles/Uniforms.dir/app.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/kprzystalski/UJ/3d/src/3rdParty -I/Users/kprzystalski/UJ/3d/src -I/Users/kprzystalski/UJ/3d/src/3rdParty/glad/glad_4_1/glad/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-src/include -I/Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks
+  OBJECT_DIR = src/Assignments/Triangle/CMakeFiles/Uniforms.dir
+  OBJECT_FILE_DIR = src/Assignments/Triangle/CMakeFiles/Uniforms.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Uniforms
+
+
+#############################################
+# Link the executable src/Assignments/Triangle/Uniforms
+
+build src/Assignments/Triangle/Uniforms: CXX_EXECUTABLE_LINKER__Uniforms_Debug CMakeFiles/glad.dir/src/3rdParty/glad/glad_4_1/glad/src/gl.c.o src/Assignments/Triangle/CMakeFiles/Uniforms.dir/main.cpp.o src/Assignments/Triangle/CMakeFiles/Uniforms.dir/app.cpp.o | /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd _deps/glfw-build/src/libglfw3.a src/Application/libapplication.a /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd _deps/glfw-build/src/libglfw3.a || _deps/glfw-build/src/libglfw3.a glad src/Application/libapplication.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LINK_LIBRARIES = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd  _deps/glfw-build/src/libglfw3.a  src/Application/libapplication.a  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/OpenGL.framework/OpenGL.tbd  _deps/glfw-build/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation
+  OBJECT_DIR = src/Assignments/Triangle/CMakeFiles/Uniforms.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = src/Assignments/Triangle/Uniforms
+  TARGET_PDB = Uniforms.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/Assignments/Triangle/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Assignments/Triangle && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/Assignments/Triangle/edit_cache: phony src/Assignments/Triangle/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/Assignments/Triangle/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Assignments/Triangle && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/kprzystalski/UJ/3d -B/Users/kprzystalski/UJ/3d/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/Assignments/Triangle/rebuild_cache: phony src/Assignments/Triangle/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/Assignments/Triangle/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/Assignments/Triangle/CMakeFiles/install.util: CUSTOM_COMMAND src/Assignments/Triangle/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Assignments/Triangle && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/Assignments/Triangle/install: phony src/Assignments/Triangle/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/Assignments/Triangle/CMakeFiles/install/local.util: CUSTOM_COMMAND src/Assignments/Triangle/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Assignments/Triangle && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/Assignments/Triangle/install/local: phony src/Assignments/Triangle/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/Assignments/Triangle/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/Assignments/Triangle/all
+  COMMAND = cd /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Assignments/Triangle && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/Assignments/Triangle/install/strip: phony src/Assignments/Triangle/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Target aliases.
+
+build Uniforms: phony src/Assignments/Triangle/Uniforms
+
+build application: phony src/Application/libapplication.a
+
+build engine: phony src/Engine/libengine.a
+
+build glfw: phony _deps/glfw-build/src/libglfw3.a
+
+build libapplication.a: phony src/Application/libapplication.a
+
+build libengine.a: phony src/Engine/libengine.a
+
+build libglfw3.a: phony _deps/glfw-build/src/libglfw3.a
+
+build libobjreader.a: phony src/ObjectReader/libobjreader.a
+
+build libspdlogd.a: phony _deps/spdlog-build/libspdlogd.a
+
+build libxe-engine.a: phony src/XeEngine/libxe-engine.a
+
+build objreader: phony src/ObjectReader/libobjreader.a
+
+build spdlog: phony _deps/spdlog-build/libspdlogd.a
+
+build uninstall: phony _deps/glfw-build/uninstall
+
+build update_mappings: phony _deps/glfw-build/src/update_mappings
+
+build xe-engine: phony src/XeEngine/libxe-engine.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug
+
+build all: phony glad _deps/glfw-build/all _deps/glm-build/all _deps/spdlog-build/all src/Application/all src/ObjectReader/all src/XeEngine/all src/Engine/all src/Assignments/Triangle/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build
+
+build _deps/glfw-build/all: phony _deps/glfw-build/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glfw-build/src
+
+build _deps/glfw-build/src/all: phony _deps/glfw-build/src/libglfw3.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build
+
+build _deps/glm-build/all: phony _deps/glm-build/glm/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/glm-build/glm
+
+build _deps/glm-build/glm/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/_deps/spdlog-build
+
+build _deps/spdlog-build/all: phony _deps/spdlog-build/libspdlogd.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Application
+
+build src/Application/all: phony src/Application/libapplication.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Assignments/Triangle
+
+build src/Assignments/Triangle/all: phony src/Assignments/Triangle/Uniforms
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/src/Engine
+
+build src/Engine/all: phony src/Engine/libengine.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/src/ObjectReader
+
+build src/ObjectReader/all: phony src/ObjectReader/libobjreader.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kprzystalski/UJ/3d/cmake-build-debug/src/XeEngine
+
+build src/XeEngine/all: phony src/XeEngine/libxe-engine.a
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/ExternalProject.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindGit.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/kprzystalski/UJ/3d/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/Application/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/Assignments/Triangle/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/Engine/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/ObjectReader/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/XeEngine/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake _deps/glfw-src/CMake/cmake_uninstall.cmake.in _deps/glfw-src/CMake/glfw3.pc.in _deps/glfw-src/CMake/glfw3Config.cmake.in _deps/glfw-src/CMakeLists.txt _deps/glfw-src/src/CMakeLists.txt _deps/glm-src/CMakeLists.txt _deps/glm-src/glm/CMakeLists.txt _deps/spdlog-src/CMakeLists.txt _deps/spdlog-src/cmake/ide.cmake _deps/spdlog-src/cmake/utils.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/ExternalProject.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindGit.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/kprzystalski/UJ/3d/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/Application/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/Assignments/Triangle/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/Engine/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/ObjectReader/CMakeLists.txt /Users/kprzystalski/UJ/3d/src/XeEngine/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake _deps/glfw-src/CMake/cmake_uninstall.cmake.in _deps/glfw-src/CMake/glfw3.pc.in _deps/glfw-src/CMake/glfw3Config.cmake.in _deps/glfw-src/CMakeLists.txt _deps/glfw-src/src/CMakeLists.txt _deps/glm-src/CMakeLists.txt _deps/glm-src/glm/CMakeLists.txt _deps/spdlog-src/CMakeLists.txt _deps/spdlog-src/cmake/ide.cmake _deps/spdlog-src/cmake/utils.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
